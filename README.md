@@ -7,6 +7,9 @@ The code is for setting up the latest sonarqube and jenkins on a small kubernete
 ## Install Kubernetes
 ```
 juju deploy kubernetes-core --constraints 'instance-type=t2.medium'
+```
+You can adapt to the instances of your choice
+```
 watch -c juju status --color - wait that everything is green
 mkdir -p ~/.kube
 juju scp kubernetes-master/0:config ~/.kube/config
