@@ -4,7 +4,7 @@ The code is for setting up the latest sonarqube and jenkins on a small kubernete
 
 # Steps
 
-## Install Kubernetes
+## Install Kubernetes with Juju
 ```
 juju deploy kubernetes-core --constraints 'instance-type=t2.medium'
 ```
