@@ -46,7 +46,7 @@ kubectl create -f jenkins-service.yml
 kubectl get svc jenkins
 kubectl describe  svc jenkins | grep NodePort
 ```
-Open security group on the NodePort 
+Open the NodePort in the security group 
 ## Install SonarQube
 ```
 kubectl create -f sonar-deployment.yml
@@ -58,4 +58,4 @@ kubectl create -f sonar-service.yml
 kubectl get svc sonar
 kubectl describe  svc sonar | grep NodePort
 ```
-Open security group on the NodePort 
+Open the NodePort in the security group
