@@ -1,10 +1,10 @@
-## Synopsis
+# Synopsis
 
 The code is for setting up   the latest sonarqube and jenkins on a small kubernetes cluster
 
-## Steps
+# Steps
 
-# Install Kubernetes
+## Install Kubernetes
 ```
 juju deploy kubernetes-core --constraints 'instance-type=t2.medium'
 watch -c juju status --color - wait that everything is green
@@ -15,7 +15,7 @@ Query the cluster.
 ```
 kubectl cluster-info
 ```
-Accessing the Kubernetes Dashboard
+## Accessing the Kubernetes Dashboard
 
 The Kubernetes dashboard addon is installed by default, along with Heapster,
 Grafana and InfluxDB for cluster monitoring. The dashboard addons can be
@@ -35,7 +35,7 @@ By default, this establishes a proxy running on your local machine and the
 kubernetes-master unit. To reach the Kubernetes dashboard, visit
 http://localhost:8001/ui
 
-# Install Jenkins
+## Install Jenkins
 ```
 kubectl create -f jenkins-deployment.yml
 ```
@@ -47,7 +47,7 @@ kubectl get svc jenkins
 kubectl describe  svc jenkins | grep NodePort
 ```
 Open security group on the NodePort 
-# Install SonarQube
+## Install SonarQube
 ```
 kubectl create -f sonar-deployment.yml
 ```
