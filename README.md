@@ -22,11 +22,15 @@ Grafana and InfluxDB for cluster monitoring. The dashboard addons can be
 enabled or disabled by setting the enable-dashboard-addons config on the
 kubernetes-master application:
 
+```
 juju config kubernetes-master enable-dashboard-addons=true
+```
 To access the dashboard, you may establish a secure tunnel to your cluster with
 the following command:
 
+```
 kubectl proxy
+```
 By default, this establishes a proxy running on your local machine and the
 kubernetes-master unit. To reach the Kubernetes dashboard, visit
 http://localhost:8001/ui
