@@ -1,6 +1,6 @@
 # Synopsis
 
-The code is for setting up   the latest sonarqube and jenkins on a small kubernetes cluster
+The code is for setting up the latest sonarqube and jenkins on a small kubernetes cluster
 
 # Steps
 
