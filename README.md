@@ -57,13 +57,14 @@ http://localhost:8001/ui
 $ ./kubernetes-devops.sh
 # Verify that the pods is up
 $ kubectl get pods
+# To get your Jenkins admin password
+$ kubectl logs JENKINS_POD
 ```
 ## Option 2 - Install each component one by one
 ### Install Jenkins
 ```bash
 # Create Jenkins deployment
 $ kubectl create -f jenkins-deployment.yml
-
 # Verify that the pod is up
 $ kubectl get pods | grep jenkins
 # Create Jenkins service
@@ -71,6 +72,8 @@ $ kubectl create -f jenkins-service.yml
 # Check service is up
 $ kubectl get svc jenkins
 $ kubectl describe  svc jenkins | grep NodePort
+# To get your Jenkins admin password
+$ kubectl logs JENKINS_POD_NAME  | grep -B2 AdminPassword
 ```
 Open the NodePort in the security group 
 ### Install SonarQube
