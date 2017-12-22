@@ -10,8 +10,17 @@ YOu can either run the script to install Sonarqube, Nexus and Jenkins or pick an
 
 https://jujucharms.com/docs/2.3/reference-install
 
+## Setup Juju (only if you never used it before)
+```bash
+$ juju clouds
+# Pick your cloud providers and add credentials
+$ juju add-credential aws
+$ juju bootstrap aws YOUR_CREDENTIAL_NAME
+```
+
 ## Install Kubernetes with Juju
 ```bash
+$ juju add-model mydevops YOUR_AWS_REGION
 $ juju deploy kubernetes-core --constraints 'instance-type=t2.medium'
 ```
 You can adapt to the instances of your choice
