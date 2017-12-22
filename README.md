@@ -49,7 +49,7 @@ $ ./kubernetes-devops.sh
 # Verify that the pods is up
 $ kubectl get pods
 ```
-## Option 3 - Install each component one by one
+## Option 2 - Install each component one by one
 ### Install Jenkins
 ```bash
 # Create Jenkins deployment
